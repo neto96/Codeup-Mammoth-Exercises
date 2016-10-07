@@ -7,13 +7,25 @@
 <body>
 <script>
     var bottles = 99;
+    var beersOnTheWall = " bottles of beer on the wall";
+    var passItAround = " bottles of beer. Take one down, pass it around.";
+    var again = " bottles of beer on the wall. AGAIN!";
     do {
-        console.log(bottles + ' bottles of beer on the wall.');
-        console.log(bottles + ' bottles of beer. Take one down, pass it around.')
+        if (bottles == 2) {
+            console.log(bottles + beersOnTheWall);
+            console.log(bottles + passItAround);
+            console.log((bottles - 1) + ' bottle of beer on the wall. LAST ONE!')
+        } else if (bottles == 1) {
+            console.log(bottles + ' bottle of beer on the wall.');
+            console.log(bottles + ' bottle of beer. Take one down, pass it around.');
+        } else {
+            console.log(bottles + beersOnTheWall);
+            console.log(bottles + passItAround);
+            console.log((bottles - 1) + again);
+        }
         bottles--;
-        console.log(bottles + ' bottles of beer on the wall. AGAIN!')
     } while (bottles > 0);
-        console.log('no bottles of beer on the wall. BEER RUN!')
+        console.log('No more bottles of beer on the wall. BEER RUN!')
 </script>
 </body>
 </html>

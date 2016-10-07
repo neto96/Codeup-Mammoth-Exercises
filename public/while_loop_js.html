@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>While Loop</title>
+</head>
+<body>
+
+
+<script>
+    'use strict';
+    var allCones = Math.floor(Math.random() * 50) + 50;
+    var conesSold = 0;
+    do {
+        var cones = Math.floor(Math.random() * 5) + 1;
+
+        if (cones > (allCones - conesSold)) {
+            console.log("You don't have enough cones");
+        } else {
+            conesSold = conesSold + cones;
+            console.log(cones + ' cones sold...');
+        }
+
+    } while (conesSold <= allCones);
+
+    console.log('You sold all your cones!');
+
+</script>
+</body>
+</html>

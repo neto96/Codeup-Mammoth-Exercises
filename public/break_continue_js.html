@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Break Continue</title>
+</head>
+<body>
+<script>
+    var randomN;
+    do {
+        randomN = Math.floor((Math.random() * 50) + 1);
+    } while ((randomN % 2) == 0);
+    console.log('The random number to skip is: ' + randomN);
+
+    for (var i = 1; i <=50 ; i++) {
+        if (i % 2 == 0) {
+            continue;
+        } else if (i == randomN) {
+            console.log('Yikes! Skipping number: ' + randomN)
+            continue;
+        }
+        console.log('Here is an odd number: ' + i)
+    }
+</script>
+</body>
+</html>
